@@ -1,6 +1,11 @@
 # AI_molecular_generator
 Generating Polar Analogues of Diphenhydramine with REINVENT4
 
+<p align="center">
+  <img src="images/Diphen.png" alt="diphenhydramine (DHM) structure" />
+</p>
+
+
 ![Workflow Overview](./docs/diagram.png)
 
 ## 📖 Introduction
