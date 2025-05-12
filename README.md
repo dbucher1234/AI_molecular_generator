@@ -110,9 +110,9 @@ reinvent sampling.toml
 **Output NLL (Negative Log-Likelihood)**  
 A measure of how “surprised” the model is by a SMILES string—lower NLL means the model finds it more likely, higher NLL means it’s less familiar.
 
-- **Low NLL (< 10):** very likely (model confident)  
-- **Mid NLL (10 – 20):** plausible but less common  
-- **High NLL (> 20):** unlikely or unusual (but still valid)
+- **Low NLL (< 10):** Highly similar (model confident)  
+- **Mid NLL (10 – 15):** Similar to reference  
+- **High NLL (> 15):** Diverse
 
 | #  | SMILES (truncated)                       | NLL   | logP  | Interpretation            |
 |----|-------------------------------------------|-------|-------|---------------------------|
@@ -120,8 +120,8 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
 | 2  | CN(C)CCC(c1ccc(Cl)cc1)c1ccccn1            | 11.40 | 3.10  | Similar                   |
 | 3  | O=C(O)COCCN1CCN(C(c2ccccc2)c2ccccc2)CC1   | 12.00 | 0.80  | Similar                   |
 | 4  | CC(CN1c2ccccc2Sc2ccccc21)N(C)C            | 12.50 | 4.30  | Similar                   |
-| 5  | CN(C)CCOC(=O)c1ccccc1F                    | 15.00 | 2.70  | Less similar              |
-| 6  | CC(C)OCCCN(C)C(=O)CCNC(=O)c1ccccc1        | 26.21 | –0.20 | More diverse              |
+| 5  | CN(C)CCOC(=O)c1ccccc1F                    | 15.00 | 2.70  | Diverse                   |
+| 6  | CC(C)OCCCN(C)C(=O)CCNC(=O)c1ccccc1        | 26.21 | –0.20 | Very diverse              |
 
 
 <p align="center">
