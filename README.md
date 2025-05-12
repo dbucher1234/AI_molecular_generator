@@ -10,7 +10,7 @@ This tutorial demonstrates how to use **REINVENT4** to generate de-novo small-mo
 
 Diphenhydramine is quite lipophilic (log P ≈ 3.3), which, along with its pKₐ and high passive permeability, drives strong CNS uptake—total brain levels ~18× plasma in rats, with an unbound‐drug brain/plasma ratio of ∼4–7. 
 
-Our goal is to bias the generator toward more polar compounds that are less likely to cross the blood–brain barrier, **reducing central-nervous-system side effects**.
+Our goal is to generate ideas for more polar compounds that are less likely to cross the blood–brain barrier, **reducing central-nervous-system side effects**.
 
 ---
 
