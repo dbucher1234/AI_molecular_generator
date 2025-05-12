@@ -96,14 +96,9 @@ reinvent mol2mol.toml
 
 Run the generator to produce a pool of candidates:
 
-\`\`\`bash
-reinvent4 sample \
-  --model STEP1_pretrain_and_transfer_learning/final.ckpt \
-  --prompts STEP2_prepare_reference/prompts.smi \
-  --batch-size 128 \
-  --samples 10000 \
-  --output STEP3_sampling/raw_samples.smi
-\`\`\`
+```bash
+reinvent sampling.toml
+```
 
 ---
 
