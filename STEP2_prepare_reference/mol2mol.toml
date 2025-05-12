@@ -1,0 +1,34 @@
+# STEP 2: Mol2Mol Fine-Tuning for Diphenhydramine
+# ------------------------------------------------
+# Fine-tune your prior so it learns to generate close analogs
+# of diphenhydramine using high-similarity pairs.
+
+run_type            = "transfer_learning"
+device              = "cuda:0"
+tb_logdir           = "tb_step2"
+json_out_config     = "step2_transfer.json"
+
+[parameters]
+num_epochs          = 1000
+batch_size          = 50
+save_every_n_epochs = 1000
+
+# Model files
+input_model_file    = "my_project.prior"
+output_model_file   = "step2.prior"
+
+# Reference SMILES (one per line), e.g. diphenhydramine and its analogs
+smiles_file         = "diphenhydramine.smi"
+validation_smiles_file = "diphenhydramine.smi"
+
+# Where sampled outputs and their scores go
+output_file         = "step2_samples.csv"
+
+# Mol2Mol pairing settings — only form pairs with Tanimoto ≥ 0.99
+[pairs]
+type                = "tanimoto"
+lower_threshold     = 0.99
+upper_threshold     = 1.0
+min_cardinality     = 1
+max_cardinality     = 199
+
