@@ -1,0 +1,23 @@
+{
+    "run_type": "transfer_learning",
+    "device": "cuda:0",
+    "tb_logdir": "tb_TL",
+    "json_out_config": "json_transfer_learning.json",
+    "parameters": {
+        "num_epochs": 1000,
+        "save_every_n_epochs": 1000,
+        "batch_size": 50,
+        "sample_batch_size": 100,
+        "num_refs": 0,
+        "input_model_file": "reinvent.prior",
+        "smiles_file": "all_antihistamines.smi",
+        "output_model_file": "my_project.prior"
+    },
+    "pairs": {
+        "type": "tanimoto",
+        "upper_threshold": 1.0,
+        "lower_threshold": 0.7,
+        "min_cardinality": 1,
+        "max_cardinality": 199
+    }
+}
