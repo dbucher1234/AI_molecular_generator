@@ -74,37 +74,11 @@ Our goal is to bias the generator toward more polar compounds that are less like
    The result is `my_project.prior`—a model that speaks both “general drug-design” (from the original prior) and “antihistamine” (from our fine-tuning).  
    You can now use it to sample entirely new, related scaffolds that retain key H₁-blocker motifs but may improve properties (e.g. polarity, hERG liability).
 
----
+**Run**  
 
-Drop this before your TOML snippet so readers understand **why** we’re pointing at `reinvent.prior`, **why** we use `all_antihistamines.smi`, and **how** the Tanimoto-based filter steers the new model between “too generic” and “too narrow.”
-
-
-1. **Gather dataset**  
-   - Collect ~1 000 known antihistamines (e.g., from ChEMBL).  
-   - Format as one SMILES per line in \`data/antihistamines.smi\`.
-
-2. **Configure transfer-learning**  
-   Create \`step1_tl/config.yaml\`:
-
-   ```yaml
-   model:
-     base_checkpoint: ./models/base_pretrained.ckpt
-     target_smiles: ../data/antihistamines.smi
-     epochs: 5
-     learning_rate: 1e-4
-
-   training:
-     batch_size: 64
-     device: cuda
-   \`\`\`
-
-3. **Run**  
-
-   \`\`\`bash
-   reinvent4 train \
-     --config STEP1_pretrain_and_transfer_learning/step1_tl/config.yaml \
-     --output-dir STEP1_pretrain_and_transfer_learning/
-   \`\`\`
+   ```bash
+   reinvent4 STEP1_pretrain_and_transfer_learning/transfer_learning.toml
+   ```
 
 ---
 
