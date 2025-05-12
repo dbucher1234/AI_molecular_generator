@@ -83,22 +83,23 @@ Our goal is to bias the generator toward more polar compounds that are less like
 
 ---
 
-## 🛠️ STEP 2: Prepare Reference Pairs
+## Step 2: Mol2Mol Transfer Learning
 
-1. **Generate Mol2Mol Variants**  
-   - Swap phenyl → pyridyl, add small polar groups, etc.  
-   - Save variants to \`STEP2_prepare_reference/mol2mol_variants.smi\`.
+## Step 2: Mol2Mol Transfer Learning
 
-2. **Tokenize Prompts**  
+In Step 2, we move from simply biasing our SMILES generator toward your dataset (as in Step 1) to training a conditional model that learns to take an input scaffold and produce its close analogs. By fine-tuning on pairs of highly similar molecules, the Mol2Mol prior becomes specialized for lead optimization and analog design rather than broad, unconstrained sampling.
 
-   \`\`\`bash
-   reinvent4 prepare \
-     --input-smiles STEP2_prepare_reference/mol2mol_variants.smi \
-     --output-dir STEP2_prepare_reference/ \
-     --mode mol2mol
-   \`\`\`
+### Key Elements
 
-   Outputs \`prompts.smi\` ready for sampling.
+- **Conditional Prior**  
+  Start from the generic Mol2Mol model (`priors/mol2mol_scaffold_generic.prior`), which is architected to learn mappings between molecules.
+
+- **Paired Training**  
+  Supply pairs of SMILES (scaffold → analog) chosen by Tanimoto similarity (e.g. 0.99–1.0). The model learns to “translate” each scaffold into its near‐neighbor.
+
+- **Focused Sampling**  
+  After training, seeding the model with any scaffold yields close analogs, ideal for exploring small modifications around your lead compounds.
+
 
 ---
 
