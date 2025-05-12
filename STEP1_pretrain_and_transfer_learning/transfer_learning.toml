@@ -1,0 +1,30 @@
+# transfer_learning.toml
+# REINVENT4 transfer-learning configuration
+
+# What to do
+run_type           = "transfer_learning"
+device             = "cuda:0"                       # or "cpu"
+tb_logdir          = "tb_TL"   	                    # TensorBoard log directory
+json_out_config    = "json_transfer_learning.json"  # also export this config as JSON
+
+[parameters]
+# Training hyperparameters
+num_epochs         = 1000      # total epochs to run
+save_every_n_epochs= 1000      # checkpoint frequency
+batch_size         = 50        # molecules per training batch
+sample_batch_size  = 100       # molecules per sample-loss batch
+num_refs           = 0         # no reference sampling for large datasets
+
+# I/O
+input_model_file   = "reinvent.prior"
+smiles_file        = "all_antihistamines.smi"    # one SMILES per line
+output_model_file  = "my_project.prior"
+
+# Similarity-pair filtering (Tanimoto)
+[pairs]
+type               = "tanimoto"
+upper_threshold    = 1.0       # allow identical up to T = 1.0
+lower_threshold    = 0.7       # require at least T = 0.7
+min_cardinality    = 1
+max_cardinality    = 199
+
