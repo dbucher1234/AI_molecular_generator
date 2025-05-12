@@ -127,6 +127,8 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
   <img src="images/Analogues.png" alt="Selected sampling output" />
 </p>
 
+(at this stage, one could already 2D plot clogP versus the NLL in Datawarrior, and inspect analogue ideas that are both closely related but more polar).
+
 ---
 
 ## 📊 STEP 4: Scoring & Filtering
