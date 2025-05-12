@@ -21,9 +21,7 @@ Our goal is to bias the generator toward more polar compounds that are less like
 - A working CUDA-enabled GPU (optional, but highly recommended)  
 - Basic familiarity with command-line operations  
 
-\`\`\`bash
-pip install reinvent4 rdkit-pypi
-\`\`\`
+```bash pip install reinvent4 rdkit-pypi ```
 
 ---
 
