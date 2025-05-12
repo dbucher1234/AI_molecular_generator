@@ -41,8 +41,8 @@ Our goal is to bias the generator toward more polar compounds that are less like
 1. **Pretrain & Transfer Learning**  
    Fine-tune a REINVENT4 model on an antihistamine-focused dataset to bias it toward relevant chemotypes.
 
-2. **Prepare Reference Pairs**  
-   Convert diphenhydramine and simple perturbations (mol2mol variants) into tokenized prompts.
+2. **Create Closely Related Molecules**  
+   Use diphenhydramine as a starting point to bias the network toward closely related molecules.
 
 3. **Sampling**  
    Generate a large pool of candidate analogues.
