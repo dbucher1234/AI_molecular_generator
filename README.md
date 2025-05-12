@@ -87,14 +87,6 @@ Our goal is to bias the generator toward more polar compounds that are less like
 
 In Step 2, we move from simply biasing our SMILES generator toward the general anti-histamines dataset (as in Step 1) to training a conditional model that learns to take diphenhydramine as an input scaffold and produce close analogs. By fine-tuning on pairs of highly similar molecules, the prior becomes specialized for lead optimization and analog design rather than broad, unconstrained sampling.
 
-### Key Elements
-
-- **Conditional Prior**  
-  Start from the my_project.prior model.
-
-- **Paired Training**  
-  Supply pairs of SMILES (scaffold → analog) chosen by Tanimoto similarity (e.g. 0.99–1.0). The model learns to “translate” each scaffold into its near‐neighbor.
-
 ```bash
    cd STEP2_prepare_reference
    reinvent mol2mol.toml
