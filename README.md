@@ -75,8 +75,8 @@ Our goal is to bias the generator toward more polar compounds that are less like
    You can now use it to sample entirely new, related scaffolds that retain key H₁-blocker motifs but may improve properties (e.g. polarity, hERG liability).
 
 ```bash
-   cd STEP1_pretrain_and_transfer_learning
-   reinvent transfer_learning.toml
+cd STEP1_pretrain_and_transfer_learning
+reinvent transfer_learning.toml
 ```
 
 ---
@@ -86,8 +86,8 @@ Our goal is to bias the generator toward more polar compounds that are less like
 In Step 2, we move from simply biasing our SMILES generator toward the general anti-histamines dataset (as in Step 1) to training a conditional model that learns to take diphenhydramine as an input scaffold and produce close analogs. By fine-tuning on pairs of highly similar molecules, the prior becomes specialized for lead optimization and analog design rather than broad, unconstrained sampling.
 
 ```bash
-   cd STEP2_prepare_reference
-   reinvent mol2mol.toml
+cd STEP2_prepare_reference
+reinvent mol2mol.toml
 ```
 
 ---
