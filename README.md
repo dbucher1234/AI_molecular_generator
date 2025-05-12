@@ -20,7 +20,8 @@ Our goal is to bias the generator toward more polar compounds that are less like
 - RDKit  
 - A working CUDA-enabled GPU (optional, but recommended)  
 ```bash
-pip install reinvent4 rdkit-pypi ```
+pip install reinvent4 rdkit-pypi
+```
 
 ---
 
