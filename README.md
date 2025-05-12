@@ -94,7 +94,7 @@ reinvent mol2mol.toml
 
 ## 🎲 STEP 3: Sampling
 
-There are two possible sampling strategy: 
+There are two possible sampling strategies: 
 
 **Multinomial** sampling picks each next character at random according to the model’s probability distribution (you can “heat up” or “cool down” the randomness via temperature). This produces a diverse set of analogs, which is great for exploring chemical space.
 
@@ -102,11 +102,24 @@ There are two possible sampling strategy:
 
 For lead‐optimization and finding a broad set of possible analogs around diphenhydramine, we will use multinomial sampling (temperature = 1.0) to balance diversity and quality.
 
-Run the generator to produce a pool of candidates:
+The generator to produce a pool of candidates is run by:
 
 ```bash
 reinvent sampling.toml
 ```
+**Output NLL (Negative Log-Likelihood)**  
+A measure of how “surprised” the model is by a SMILES string—lower NLL means the model finds it more likely, higher NLL means it’s less familiar.
+
+- **Low NLL (< 10):** very likely (model confident)  
+- **Mid NLL (10 – 25):** plausible but less common  
+- **High NLL (> 25):** unlikely or unusual (but still valid)
+
+| SMILES (truncated)                      | NLL    | Interpretation                   |
+|-----------------------------------------|--------|----------------------------------|
+| CN(C)CCOC(c1ccccc1)c1ccccc1             | 0.0003 | extremely likely (very confident)|
+| O=C(O)COCCN…Cl)cc2)CC1                  | 12.03  | fairly likely                    |
+| CC(C)OCCCN…c1ccccc1                     | 26.21  | less likely (unfamiliar)         |
+| CN(C)CCOC(=O)…C(F)(F)F                  | 17.32  | moderate surprise (rare)         |
 
 ---
 
