@@ -60,7 +60,7 @@ Our goal is to bias the generator toward more polar compounds that are less like
 ### 🔍 What’s Happening in Transfer Learning?
 
 1. **Starting from a Broad Prior**  
-   We begin with `reinvent.prior`, a model pretrained on millions of drug-like molecules (following Lipinski rules, diverse scaffolds, commercial and clinical compounds). This “prior” knows general medicinal-chemistry grammar: how to stitch atoms into plausible, synthesizable small molecules.
+   We begin with `reinvent.prior`, a model pretrained on millions of drug-like molecules (from public databases, e.g. ChEMBL, PubChem) (Loeffler et al., 2024). This “prior” knows general medicinal-chemistry grammar: how to stitch atoms into plausible, synthesizable small molecules.
 
 2. **Focusing on Antihistamines**  
    Next, we fine-tune (transfer-learn) that prior using our custom `all_antihistamines.smi` dataset—~300 known H₁-blockers from ChEMBL. This biases the model toward the scaffolds, functional groups, and chemotypes characteristic of first-generation antihistamines.
