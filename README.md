@@ -9,7 +9,7 @@ Generating Polar Analogues of Diphenhydramine with REINVENT4
 
 This tutorial demonstrates how to use **REINVENT4** to generate de-novo small-molecule analogues of the classic antihistamine **diphenhydramine** (SMILES: `CN(C)CCOC(c1ccccc1)c2ccccc2`). Diphenhydramine is quite lipophilic (log P ≈ 3.4–3.7), which, along with its pKₐ and high passive permeability, drives strong CNS uptake—total brain levels ~18× plasma in rats, with an unbound‐drug brain/plasma ratio of ∼4–7. 
 
-Our goal is to bias the generator toward more polar compounds that are less likely to cross the blood–brain barrier, reducing central-nervous-system side effects.
+Our goal is to bias the generator toward more polar compounds that are less likely to cross the blood–brain barrier, **reducing central-nervous-system side effects**.
 
 ---
 
