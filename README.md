@@ -57,6 +57,28 @@ Our goal is to bias the generator toward more polar compounds that are less like
 
 ## 🚀 STEP 1: Pretrain & Transfer Learning
 
+### 🔍 What’s Happening in Transfer Learning?
+
+1. **Starting from a Broad Prior**  
+   We begin with `reinvent.prior`, a model pretrained on millions of drug-like molecules (following Lipinski rules, diverse scaffolds, commercial and clinical compounds). This “prior” knows general medicinal-chemistry grammar: how to stitch atoms into plausible, synthesizable small molecules.
+
+2. **Focusing on Antihistamines**  
+   Next, we fine-tune (transfer-learn) that prior using our custom `all_antihistamines.smi` dataset—~300 known H₁-blockers from ChEMBL. This biases the model toward the scaffolds, functional groups, and chemotypes characteristic of first-generation antihistamines.
+
+3. **Balancing Novelty vs. Familiarity**  
+   We don’t want to lose all the broad-chemistry knowledge, nor merely memorize known antihistamines.  
+   - **Similarity-pair filtering** enforces that, during training, generated molecules stay within a Tanimoto window (e.g. 0.7–1.0) of our antihistamine set.  
+   - This encourages the model to explore **close analogues** of antihistamines, while the underlying prior still “remembers” general drug-like rules.
+
+4. **Saving a New Specialized Prior**  
+   The result is `my_project.prior`—a model that speaks both “general drug-design” (from the original prior) and “antihistamine” (from our fine-tuning).  
+   You can now use it to sample entirely new, related scaffolds that retain key H₁-blocker motifs but may improve properties (e.g. polarity, hERG liability).
+
+---
+
+Drop this before your TOML snippet so readers understand **why** we’re pointing at `reinvent.prior`, **why** we use `all_antihistamines.smi`, and **how** the Tanimoto-based filter steers the new model between “too generic” and “too narrow.”
+
+
 1. **Gather dataset**  
    - Collect ~1 000 known antihistamines (e.g., from ChEMBL).  
    - Format as one SMILES per line in \`data/antihistamines.smi\`.
