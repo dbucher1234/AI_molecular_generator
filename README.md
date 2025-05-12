@@ -74,8 +74,6 @@ Our goal is to bias the generator toward more polar compounds that are less like
    The result is `my_project.prior`—a model that speaks both “general drug-design” (from the original prior) and “antihistamine” (from our fine-tuning).  
    You can now use it to sample entirely new, related scaffolds that retain key H₁-blocker motifs but may improve properties (e.g. polarity, hERG liability).
 
-**Run:**  
-
    ```bash
    cd STEP1_pretrain_and_transfer_learning
    reinvent transfer_learning.toml
