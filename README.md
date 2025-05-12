@@ -5,9 +5,6 @@ Generating Polar Analogues of Diphenhydramine with REINVENT4
   <img src="images/Diphen.png" alt="diphenhydramine (DHM) structure" />
 </p>
 
-
-![Workflow Overview](./docs/diagram.png)
-
 ## 📖 Introduction
 
 This tutorial demonstrates how to use **REINVENT4** to generate de-novo small-molecule analogues of the classic antihistamine **diphenhydramine** (SMILES: `CN(C)CCOC(c1ccccc1)c2ccccc2`).  
