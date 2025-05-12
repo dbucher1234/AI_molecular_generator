@@ -116,10 +116,10 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
 
 | # | SMILES (truncated)                      | NLL    | Interpretation                   |
 |---|-----------------------------------------|--------|----------------------------------|
-| 1 | CN(C)CCOC(c1ccccc1)c1ccccc1             | 0.0003 | extremely likely (very confident)|
-| 2 | O=C(O)COCCN…Cl)cc2)CC1                  | 12.03  | fairly likely                    |
-| 3 | CC(C)OCCCN…c1ccccc1                     | 26.21  | less likely (unfamiliar)         |
-| 4 | CN(C)CCOC(=O)…C(F)(F)F                  | 17.32  | moderate surprise (rare)         |
+| 1 | CN(C)CCOC(c1ccccc1)c1ccccc1             | 0.0003 | Identical to reference           |
+| 2 | O=C(O)COCCN…Cl)cc2)CC1                  | 12.03  | Similar                          |
+| 3 | CN(C)CCOC(=O)…C(F)(F)F                  | 17.32  | Less similar                     |
+| 4 | CC(C)OCCCN…c1ccccc1                     | 26.21  | More diverse                     |
 
 ---
 
