@@ -114,12 +114,12 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
 - **Mid NLL (10 – 25):** plausible but less common  
 - **High NLL (> 25):** unlikely or unusual (but still valid)
 
-| SMILES (truncated)                      | NLL    | Interpretation                   |
-|-----------------------------------------|--------|----------------------------------|
-| CN(C)CCOC(c1ccccc1)c1ccccc1             | 0.0003 | extremely likely (very confident)|
-| O=C(O)COCCN…Cl)cc2)CC1                  | 12.03  | fairly likely                    |
-| CC(C)OCCCN…c1ccccc1                     | 26.21  | less likely (unfamiliar)         |
-| CN(C)CCOC(=O)…C(F)(F)F                  | 17.32  | moderate surprise (rare)         |
+| # | SMILES (truncated)                      | NLL    | Interpretation                   |
+|---|-----------------------------------------|--------|----------------------------------|
+| 1 | CN(C)CCOC(c1ccccc1)c1ccccc1             | 0.0003 | extremely likely (very confident)|
+| 2 | O=C(O)COCCN…Cl)cc2)CC1                  | 12.03  | fairly likely                    |
+| 3 | CC(C)OCCCN…c1ccccc1                     | 26.21  | less likely (unfamiliar)         |
+| 4 | CN(C)CCOC(=O)…C(F)(F)F                  | 17.32  | moderate surprise (rare)         |
 
 ---
 
