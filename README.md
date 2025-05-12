@@ -179,4 +179,4 @@ We welcome contributions! To help improve this workflow:
 ## 📜 References
 
 - O’Boyle, N.M. et al., *Mol2Mol perturbation methods*  
-- Zhavoronkov, A. et al., *REINVENT: de novo design* (J. Chem. Inf. Model., 2020)  
+- Loeffler, H.H., He, J., Tibo, A. et al. Reinvent 4: Modern AI–driven generative molecule design. J Cheminform 16, 20 (2024). https://doi.org/10.1186/s13321-024-00812-5
