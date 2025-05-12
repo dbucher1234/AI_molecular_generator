@@ -94,6 +94,14 @@ reinvent mol2mol.toml
 
 ## 🎲 STEP 3: Sampling
 
+There are two possible sampling strategy: 
+
+**Multinomial** sampling picks each next character at random according to the model’s probability distribution (you can “heat up” or “cool down” the randomness via temperature). This produces a diverse set of analogs, which is great for exploring chemical space.
+
+**Beamsearch** deterministically follows the top‐scoring paths to generate the highest‐likelihood SMILES. It yields the most probable analogs but with far less variety.
+
+For lead‐optimization and finding a broad set of possible analogs around diphenhydramine, we will use multinomial sampling (temperature = 1.0) to balance diversity and quality.
+
 Run the generator to produce a pool of candidates:
 
 ```bash
