@@ -85,8 +85,6 @@ Our goal is to bias the generator toward more polar compounds that are less like
 
 ## Step 2: Mol2Mol Transfer Learning
 
-## Step 2: Mol2Mol Transfer Learning
-
 In Step 2, we move from simply biasing our SMILES generator toward your dataset (as in Step 1) to training a conditional model that learns to take an input scaffold and produce its close analogs. By fine-tuning on pairs of highly similar molecules, the Mol2Mol prior becomes specialized for lead optimization and analog design rather than broad, unconstrained sampling.
 
 ### Key Elements
