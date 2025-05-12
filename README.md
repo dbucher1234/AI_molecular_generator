@@ -18,16 +18,15 @@ Our goal is to bias the generator toward more polar compounds that are less like
 - **REINVENT4** installed (see [REINVENT4 installation guide](https://github.com/MolecularAI/Reinvent4))  
 - Python 3.8+  
 - RDKit  
-- A working CUDA-enabled GPU (optional, but highly recommended)  
-- Basic familiarity with command-line operations  
-
-```bash pip install reinvent4 rdkit-pypi ```
+- A working CUDA-enabled GPU (optional, but recommended)  
+```bash
+pip install reinvent4 rdkit-pypi ```
 
 ---
 
 ## 🗂️ Repository Structure
 
-\`\`\`
+```
 .
 ├── STEP1_pretrain_and_transfer_learning/
 ├── STEP2_prepare_reference/
@@ -35,7 +34,7 @@ Our goal is to bias the generator toward more polar compounds that are less like
 ├── STEP4_score_and_filter/
 ├── STEP5_remove_existing/
 └── README.md
-\`\`\`
+```
 
 ---
 
@@ -67,7 +66,7 @@ Our goal is to bias the generator toward more polar compounds that are less like
 2. **Configure transfer-learning**  
    Create \`step1_tl/config.yaml\`:
 
-   \`\`\`yaml
+   ```yaml
    model:
      base_checkpoint: ./models/base_pretrained.ckpt
      target_smiles: ../data/antihistamines.smi
