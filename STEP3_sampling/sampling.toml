@@ -1,0 +1,31 @@
+# STEP 3: Sampling with Your Mol2Mol Prior
+# ----------------------------------------
+# Generate analogs from diphenhydramine using your fine-tuned model.
+
+run_type           = "sampling"
+device             = "cuda:0"
+json_out_config    = "step3_sampling.json"
+
+[parameters]
+# — Model & inputs —
+model_file         = "step2.prior"               # Mol2Mol fine-tuned prior
+smiles_file        = "diphenhydramine.smi"       # one SMILES per line
+
+# — Sampling settings —
+sample_strategy    = "multinomial"               # “multinomial” or “beamsearch”
+temperature        = 1.0                         # only used with multinomial
+num_smiles         = 500000                      # total molecules to sample
+unique_molecules   = true                        # drop duplicate SMILES
+randomize_smiles   = true                        # shuffle atom order
+
+# — Outputs & logging —
+output_file        = "step3_samples.csv"         # SMILES + NLL scores
+tb_logdir          = "tb_sampling"               # TensorBoard logs
+
+[pairs]
+type               = "tanimoto"                  # similarity metric (Mol2Mol)
+lower_threshold    = 0.99                         # min Tanimoto
+upper_threshold    = 1.0                          # max Tanimoto
+min_cardinality    = 1                            # min atom changes
+max_cardinality    = 199                          # max atom changes
+
