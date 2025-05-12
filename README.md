@@ -77,7 +77,8 @@ Our goal is to bias the generator toward more polar compounds that are less like
 **Run**  
 
    ```bash
-   reinvent4 STEP1_pretrain_and_transfer_learning/transfer_learning.toml
+   cd STEP1_pretrain_and_transfer_learning
+   reinvent transfer_learning.toml
    ```
 
 ---
