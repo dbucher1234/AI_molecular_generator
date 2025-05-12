@@ -1,4 +1,4 @@
-# AI_molecular_generator
+# AI Molecular Generator
 Generating Polar Analogues of Diphenhydramine with REINVENT4
 
 <p align="center">
