@@ -149,7 +149,7 @@ Top compounds after filtering and ranking are shown below:
 
 ## 📈 Results & Next Steps
 
-This approach can be used to generate thousands of candidates for docking studies. Alternatively, it could be part of an active learning loop—by selecting the top-scoring compounds and feeding them back into the model (STEP 1 & 2) to bias future generations toward promising chemotypes.
+This approach can be used to generate thousands of candidates for docking studies. Alternatively, it could be part of an active learning loop—by selecting the top-scoring compounds and feeding them back into an improved model (STEP 1 & 2) to bias future generations toward promising chemotypes.
 
 ---
 
