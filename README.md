@@ -13,7 +13,7 @@ Diphenhydramine is a highly lipophilic compound (log P ≈ 3.3), leading to st
 
 ## 🔧 Prerequisites
 
-- **REINVENT4** installed (see [REINVENT4 installation guide](https://github.com/MolecularAI/Reinvent4))  
+- REINVENT4 installed (see [REINVENT4 installation guide](https://github.com/MolecularAI/Reinvent4))  
 - Python 3.8+  
 - RDKit  
 - A working CUDA-enabled GPU (optional, but recommended)  
