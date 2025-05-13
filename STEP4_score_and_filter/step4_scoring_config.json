@@ -1,0 +1,48 @@
+{
+    "run_type": "scoring",
+    "json_out_config": "step4_scoring_config.json",
+    "parameters": {
+        "smiles_file": "step3_samples.csv",
+        "output_file": "step4_scored.csv"
+    },
+    "scoring": {
+        "type": "arithmetic_mean",
+        "parallel": false,
+        "component": [
+            {
+                "TanimotoDistance": {
+                    "endpoint": [
+                        {
+                            "name": "Similarity to diphenhydramine",
+                            "weight": 1,
+                            "params": {
+                                "smiles": [
+                                    "CN(C)CCOC(c1ccccc1)c2ccccc2"
+                                ],
+                                "radius": 3,
+                                "use_counts": true,
+                                "use_features": false
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "SlogP": {
+                    "endpoint": [
+                        {
+                            "name": "low logP preference",
+                            "weight": 1,
+                            "transform": {
+                                "type": "reverse_sigmoid",
+                                "low": -5.0,
+                                "high": 3.0,
+                                "k": 5.0
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
