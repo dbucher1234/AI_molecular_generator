@@ -59,14 +59,9 @@ Diphenhydramine is a highly lipophilic compound (log P ≈ 3.3), leading to st
 2. **Focusing on Antihistamines**  
    Next, we fine-tune (transfer-learn) that prior using our custom `all_antihistamines.smi` dataset— extracted from PubChem. This biases the model toward the scaffolds, functional groups, and chemotypes characteristic of antihistamines.
 
-3. **Balancing Novelty vs. Familiarity**  
-   We don’t want to lose all the broad-chemistry knowledge, nor merely memorize known antihistamines.  
-   - Similarity-pair filtering enforces that, during training, generated molecules stay within a Tanimoto window (e.g. 0.7–1.0) of our antihistamine set.  
-   - This encourages the model to explore **close analogues** of antihistamines, while the underlying prior still “remembers” general drug-like rules.
-
-4. **Saving a New Specialized Prior**  
+3. **Saving a New Specialized Prior**  
    The result is `my_project.prior`—a model that speaks both “general drug-design” (from the original prior) and “antihistamine” (from our fine-tuning).  
-   You can now use it to sample entirely new, related scaffolds that retain key H₁-blocker motifs but may improve properties (e.g. polarity, hERG liability).
+   You can now use it to sample entirely new, related scaffolds that retain key H₁-blocker motifs but may improve properties (e.g. polarity).
 
 ```bash
 cd STEP1_pretrain_and_transfer_learning
