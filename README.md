@@ -137,8 +137,6 @@ At this stage, one could already plot clogP versus the NLL in Datawarrior, and i
 
 ## 📊 STEP 4: Scoring & Filtering
 
-## 🔎 Step 4: Scoring & Filtering
-
 By now we’ve generated a large pool of analogs. In Step 4 we:
 
 1. **Filter** out any molecule with a higher log P than diphenhydramine (3.3).  
