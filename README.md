@@ -160,7 +160,7 @@ Some top compounds after filtering and ranking are shown below (IDs 0, 19, 24, 1
 
 ## 📈 Results & Next Steps
 
-One could use this approach to generate thousands of compounds for docking, keeping the best scoring ones to re-train the model (STEP1) towards chemotypes of interests. 
+This approach can be used, for example, to generate thousands of candidates for docking studies, or as part of an active learning loop—by selecting the top-scoring compounds and feeding them back into the model (STEP 1 & 2) to bias future generations toward promising chemotypes.
 
 ---
 
