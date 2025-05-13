@@ -160,7 +160,7 @@ Some top compounds after filtering and ranking are shown below (IDs 0, 19, 24, 1
 
 ## 📈 Results & Next Steps
 
-One could then use this approach to generate many compounds for docking, and use the best compounds to bais the network toward certain chemotypes of interests. 
+One could use this approach to generate thousands of compounds for docking, keeping the best scoring ones to re-train the model (STEP1) towards chemotypes of interests. 
 
 ---
 
