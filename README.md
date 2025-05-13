@@ -141,7 +141,7 @@ By now we’ve generated a large pool of analogs. In Step 4 we:
 
 1. **Filter** out any molecule with a higher log P than diphenhydramine (3.3).  
 2. **Score** each remaining hit by combining:
-   - **Reverse-normalized NLL** (1 for identical, 0 for most dissimilar)  
+   - **Reverse-normalized NLL** (1 identical → 0 dissimilar)  
    - **Tanimoto similarity** to diphenhydramine (1 identical → 0 dissimilar)  
    The two are averaged to give a **Combined** similarity score (0–1).
 
