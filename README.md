@@ -133,7 +133,7 @@ By now we’ve generated a large pool of analogs. In Step 4 we:
 ```bash
    python score_and_rank.py
 ```
-Top compounds after filtering and ranking are shown below (IDs 0, 19, 24, 11, 21):
+Top compounds after filtering and ranking are shown below:
 
 | ID  | SMILES                                               | logP | Similarity | Reverse_NLL | Combined |
 |-----|------------------------------------------------------|-----:|-----------:|------------:|---------:|
