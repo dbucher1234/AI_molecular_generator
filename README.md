@@ -137,21 +137,39 @@ At this stage, one could already plot clogP versus the NLL in Datawarrior, and i
 
 ## 📊 STEP 4: Scoring & Filtering
 
-1. **Create Scoring Script**  
-   Implement \`score_logp_cns.py\` to compute:
-   - **Predicted log P** (target ≤ 2.5)  
-   - **CNS-MPO** score (target ≥ 3)  
-   - Tanimoto similarity to diphenhydramine
+## 🔎 Step 4: Scoring & Filtering
 
-2. **Filter**  
+By now we’ve generated a large pool of analogs. In Step 4 we:
 
-   \`\`\`bash
-   reinvent4 score \
-     --input STEP3_sampling/raw_samples.smi \
-     --scoring-func score_logp_cns.py \
-     --thresholds '{"max_logp":2.5,"min_cns_mpo":3,"max_sim":0.8}' \
-     --output STEP4_score_and_filter/filtered.smi
-   \`\`\`
+1. **Filter** out any molecule with a higher log P than diphenhydramine (3.3).  
+2. **Score** each remaining hit by combining:
+   - **Reverse-normalized NLL** (1 for identical, 0 for most dissimilar)  
+   - **Tanimoto similarity** to diphenhydramine (1 identical → 0 dissimilar)  
+   The two are averaged to give a **Combined** similarity score (0–1).
+
+```bash
+   python score_and_rank.py
+```
+
+<p align="center">
+  <img src="images/Results.png" alt="Diphenhydramine & top analogs" />
+</p>
+
+Here are the top five compounds (IDs 0, 19, 24, 11, 21) after filtering and ranking:
+
+| ID  | SMILES                                               | logP | Similarity | Reverse_NLL | Combined |
+|-----|------------------------------------------------------|-----:|-----------:|------------:|---------:|
+| 0   | `CN(C)CCOC(c1ccccc1)c1ccccc1`                        | 3.35 |      1.000 |       1.000 |    1.000 |
+| 19  | `CN(C)CCOC(c1ccccc1)c1ccco1`                         | 2.95 |      0.604 |       0.613 |    0.609 |
+| 24  | `CN(C)CCOC(=O)c1ccccc1`                              | 1.40 |      0.340 |       0.638 |    0.489 |
+| 11  | `O=C(O)COCCN1CCN(C(c2ccccc2)c2ccccc2)CC1`             | 2.49 |      0.224 |       0.674 |    0.449 |
+| 21  | `OCCOCCN1CCN(C(c2ccccc2)c2ccccc2)CC1`                 | 2.40 |      0.231 |       0.642 |    0.436 |
+
+- **ID 0** is the reference diphenhydramine itself (perfect scores).  
+- **IDs 19, 24, 11, 21** are filtered to be more hydrophilic than diphenhydramine (log P ≤ 3.3) and then ranked by how closely they match its NLL and fingerprint.  
+- The **Combined** score (average of reverse‐NLL and Tanimoto) drives the final ranking: the closer to 1, the more diphenhydramine‐like.
+
+You can adjust the hard log P cutoff or the weighting scheme to bias more/less strongly toward lipophilicity or structural similarity.
 
 ---
 
