@@ -96,7 +96,7 @@ The generator to produce a pool of candidates is run by:
 ```bash
 reinvent sampling.toml
 ```
-(num_smiles was set to 500k, which took about 5 min for generating the molecules on a single NVIDIA RTX A5000 GPU).
+(num_smiles was set to 500k, which took about 5 min for generating the molecules on a single NVIDIA A5000 GPU).
 
 **Output NLL (Negative Log-Likelihood)**  
 A measure of how “surprised” the model is by a SMILES string—lower NLL means the model finds it more likely, higher NLL means it’s less familiar.
