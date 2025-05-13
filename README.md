@@ -46,10 +46,7 @@ Diphenhydramine is a highly lipophilic compound (log P ≈ 3.3), leading to st
    Generate a large pool of candidate analogues.
 
 4. **Scoring & Filtering**  
-   Compute predicted log P, CNS-MPO score, and scaffold novelty to select polar, BBB-impermeable scaffolds.
-
-5. **Remove Known Molecules**  
-   Eliminate any molecules already present in ChEMBL or PubChem to focus on novel hits.
+   Compute predicted log P, and compound novelty to select new polar analogues.
 
 ---
 
