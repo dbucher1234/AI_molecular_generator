@@ -1,8 +1,6 @@
 # AI Molecular Generator
 Generating Polar Analogues of Diphenhydramine with REINVENT4
-<p align="center">
-  <img src="images/Diphen.png" alt="diphenhydramine (DHM) structure" />
-</p>
+<img src="images/Diphen.png" alt="diphenhydramine (DHM) structure" />
 
 ## 📖 Introduction
 
@@ -126,9 +124,7 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
 | 5  | CN(C)CCOC(=O)c1ccccc1F                    | 15.00 | 2.70  | Diverse                   |
 | 6  | CC(C)OCCCN(C)C(=O)CCNC(=O)c1ccccc1        | 26.21 | –0.20 | Very diverse              |
 
-<p align="center">
-  <img src="images/Analogues.png" alt="Selected sampling output" />
-</p>
+<img src="images/Analogues.png" alt="Selected sampling output" />
 
 At this stage, one could already plot clogP versus the NLL in Datawarrior, and inspect analogue that are closely related but more polar.
 
