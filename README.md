@@ -67,7 +67,7 @@ Our goal is to generate ideas for more polar compounds that are less likely to c
 
 3. **Balancing Novelty vs. Familiarity**  
    We don’t want to lose all the broad-chemistry knowledge, nor merely memorize known antihistamines.  
-   - **Similarity-pair filtering** enforces that, during training, generated molecules stay within a Tanimoto window (e.g. 0.7–1.0) of our antihistamine set.  
+   - Similarity-pair filtering enforces that, during training, generated molecules stay within a Tanimoto window (e.g. 0.7–1.0) of our antihistamine set.  
    - This encourages the model to explore **close analogues** of antihistamines, while the underlying prior still “remembers” general drug-like rules.
 
 4. **Saving a New Specialized Prior**  
