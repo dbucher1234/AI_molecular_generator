@@ -5,7 +5,7 @@ Generating Polar Analogues of Diphenhydramine with REINVENT4
 
 ## 📖 Introduction
 
-This tutorial demonstrates how to generate de-novo small-molecule analogues of the classic first-generation antihistamine **diphenhydramine**. 
+This tutorial demonstrates how to generate *de novo* small-molecule analogues of the classic first-generation antihistamine diphenhydramine. 
 
 Diphenhydramine is quite lipophilic (log P ≈ 3.3), which, along with its pKₐ and high passive permeability, drives strong CNS uptake—total brain levels ~18× plasma in rats, with an unbound‐drug brain/plasma ratio of ∼4–7. 
 
