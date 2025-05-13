@@ -144,12 +144,7 @@ By now we’ve generated a large pool of analogs. In Step 4 we:
 ```bash
    python score_and_rank.py
 ```
-
-<p align="center">
-  <img src="images/Results.png" alt="Diphenhydramine & top analogs" />
-</p>
-
-Here are the top five compounds (IDs 0, 19, 24, 11, 21) after filtering and ranking:
+Some top compounds after filtering and ranking are shown below (IDs 0, 19, 24, 11, 21):
 
 | ID  | SMILES                                               | logP | Similarity | Reverse_NLL | Combined |
 |-----|------------------------------------------------------|-----:|-----------:|------------:|---------:|
@@ -159,48 +154,16 @@ Here are the top five compounds (IDs 0, 19, 24, 11, 21) after filtering and rank
 | 11  | `O=C(O)COCCN1CCN(C(c2ccccc2)c2ccccc2)CC1`             | 2.49 |      0.224 |       0.674 |    0.449 |
 | 21  | `OCCOCCN1CCN(C(c2ccccc2)c2ccccc2)CC1`                 | 2.40 |      0.231 |       0.642 |    0.436 |
 
-- **ID 0** is the reference diphenhydramine itself (perfect scores).  
-- **IDs 19, 24, 11, 21** are filtered to be more hydrophilic than diphenhydramine (log P ≤ 3.3) and then ranked by how closely they match its NLL and fingerprint.  
-- The **Combined** score (average of reverse‐NLL and Tanimoto) drives the final ranking: the closer to 1, the more diphenhydramine‐like.
-
-You can adjust the hard log P cutoff or the weighting scheme to bias more/less strongly toward lipophilicity or structural similarity.
-
----
-
-## 🚫 STEP 5: Remove Known Molecules
-
-Remove any compounds already in public databases:
-
-\`\`\`bash
-reinvent4 dedupe \
-  --input STEP4_score_and_filter/filtered.smi \
-  --databases ChEMBL PubChem \
-  --output STEP5_remove_existing/novel_hits.smi
-\`\`\`
-
----
+<p align="center">
+  <img src="images/Results.png" alt="Diphenhydramine & top analogs" />
+</p>
 
 ## 📈 Results & Next Steps
 
-- Load \`novel_hits.smi\` into **RDKit**, **Molecular Notebook**, or **MOE**.  
-- Cluster by Bemis–Murcko scaffold; pick diverse, polar scaffolds.  
-- Prioritize top candidates for synthesis and in vitro testing.  
-- Extend scoring to include predicted hERG liability, solubility, or synthetic accessibility.
+One could then use this approach to generate many compounds for docking, and use the best compounds to bais the network toward certain chemotypes of interests. 
 
 ---
 
-## 🤝 Contributing
+## 📜 Reference
 
-We welcome contributions! To help improve this workflow:
-
-1. Fork the repository  
-2. Add or refine scoring metrics (e.g., synthetic accessibility)  
-3. Share your generated hits and any assay data  
-4. Submit issues or pull requests  
-
----
-
-## 📜 References
-
-- O’Boyle, N.M. et al., *Mol2Mol perturbation methods*  
 - Loeffler, H.H., He, J., Tibo, A. et al. Reinvent 4: Modern AI–driven generative molecule design. J Cheminform 16, 20 (2024). https://doi.org/10.1186/s13321-024-00812-5
