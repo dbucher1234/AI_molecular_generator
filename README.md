@@ -28,7 +28,6 @@ Diphenhydramine is a highly lipophilic compound (log P ≈ 3.3), leading to st
 ├── STEP2_prepare_reference/
 ├── STEP3_sampling/
 ├── STEP4_score_and_filter/
-├── STEP5_remove_existing/
 
 ```
 
