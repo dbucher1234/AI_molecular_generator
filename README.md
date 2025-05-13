@@ -1,13 +1,11 @@
 # AI Molecular Generator
-Generating Polar Analogues of Diphenhydramine with REINVENT4
+In this tutorial, we will teach a recurrent neural network (RNN) to design better molecules. More specifically, we will use REINVENT4 to generate *de novo* polar analogues of Diphenhydramine. 
 
 <img src="images/Diphen.png" alt="diphenhydramine (DHM) structure" />
 
 ## 📖 Introduction
 
-This tutorial demonstrates how to generate *de novo* small-molecule analogues of the classic first-generation antihistamine diphenhydramine. 
-
-Diphenhydramine is a highly lipophilic compound (log P ≈ 3.3), leading to strong central nervous system (CNS) uptake—total brain levels are ~18× higher than plasma in rats, with an unbound brain/plasma ratio of ~4–7. Our goal is to design more polar analogs that are less likely to cross the blood–brain barrier, in order to reduce CNS-related side effects.
+Diphenhydramine is a highly lipophilic first-generation antihistamine compound (log P ≈ 3.3), which is associated with strong central nervous system (CNS) uptake—total brain levels are ~18× higher than plasma in rats, with an unbound brain/plasma ratio of ~4–7. Our goal is to design more polar analogs that are less likely to cross the blood–brain barrier, in order to reduce CNS-related side effects.
 
 ---
 
@@ -149,7 +147,7 @@ Top compounds after filtering and ranking are shown below:
 
 ## 📈 Results & Next Steps
 
-This approach can be used to generate thousands of candidates for docking studies. Alternatively, it could be part of an active learning loop—by selecting the top-scoring compounds and feeding them back into an improved model (STEP 1 & 2) to bias future generations toward promising chemotypes.
+This approach can be used to generate thousands of candidates for docking studies. Alternatively, it could be part of an active learning loop—by selecting the top-scoring compounds and feeding them back into an improved neural net (STEP 1 & 2) to bias future generations toward promising chemotypes.
 
 ---
 
