@@ -43,7 +43,7 @@ Diphenhydramine is a highly lipophilic first-generation antihistamine compound (
    Generate a large pool of candidate analogues.
 
 4. **Scoring & Filtering**  
-   Compute predicted log P, and compound novelty to select new polar analogues.
+   Compute predicted log P, and similarity to only output polar analogues.
 
 ---
 
