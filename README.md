@@ -1,4 +1,4 @@
-# AI Molecular Generator
+# AI Molecule Generator
 In this tutorial, we will teach a recurrent neural network (RNN) to design better molecules. More specifically, we will use REINVENT4 to generate *de novo* polar analogues of Diphenhydramine. 
 
 <img src="images/Diphen.png" alt="diphenhydramine (DHM) structure" />
