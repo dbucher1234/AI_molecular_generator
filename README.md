@@ -169,4 +169,7 @@ To generate more diverse or potentially novel scaffolds, one can **skip STEP 2**
 
 ## 📜 Reference
 
-- Loeffler, H.H., He, J., Tibo, A. et al. Reinvent 4: Modern AI–driven generative molecule design. J Cheminform 16, 20 (2024). https://doi.org/10.1186/s13321-024-00812-5
+- Loeffler, H.H., He, J., Tibo, A. et al. Reinvent 4: Modern AI–driven generative molecule design. *J Cheminform* **16**, 20 (2024). https://doi.org/10.1186/s13321-024-00812-5  
+- Broccatelli, F., Carosati, E., Cruciani, G., Oprea, T.I. Transporter-mediated efflux influences CNS side effects: ABCB1, from antitarget to target. *Mol Inform* **29**(1–2), 16–26 (2010). https://doi.org/10.1002/minf.200900075
+
+
