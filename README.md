@@ -153,9 +153,9 @@ This approach can be used to generate thousands of candidates for docking studie
 
 ## 🔄 Revision: Known Antihistamine Hits
 
-Inspecting the sampled structures from the fine-tuned model, two familiar scaffolds appear—both obtained by adding a single para-chloro group:
+Inspecting the sampled structures from the fine-tuned model, two familiar scaffolds appear:
 
-- **Molecule 11** and **Molecule 21** are almost identical to **Cetirizine** (Zyrtec) and **Hydroxyzine**, respectively.
+- **Molecule 11** and **Molecule 21** are almost identical to **Cetirizine** (Zyrtec) and **Hydroxyzine**, respectively—both obtained by adding a single para-chloro group.
 
 Both Cetirizine and Hydroxyzine were included in `all_antihistamines.smi` (STEP 2), so it’s not surprising that the transfer-learned model reproduces them.
 
