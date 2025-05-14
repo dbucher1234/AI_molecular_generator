@@ -161,7 +161,7 @@ Both Cetirizine and Hydroxyzine were included in `all_antihistamines.smi` (STEP 
 
 Interestingly, compound 21 is also known as **Decloxizine**—a known H₁-blocker _not_ present in our training set. However, it may not be sufficiently original.
 
-To generate more diverse or potentially novel scaffolds, one can **skip STEP 2** entirely and sample directly from the general `reinvent.prior`. Below are a few examples obtained this way:
+To generate more diverse or potentially novel scaffolds, one can **skip STEP 2** entirely and sample directly from the general `reinvent.prior`. Below are a just few examples obtained this way:
 
 ![Diverse Hits without STEP2](images/skip_step2.png)
 
