@@ -151,6 +151,22 @@ This approach can be used to generate thousands of candidates for docking studie
 
 ---
 
+## 🔄 Revision: Known Antihistamine Hits
+
+Inspecting the sampled structures from the fine-tuned model, two familiar scaffolds appear—both obtained by adding a single para-chloro group:
+
+- **Molecule 11** and **Molecule 21** are almost identical to **Cetirizine** (Zyrtec) and **Hydroxyzine**, respectively.
+
+Both Cetirizine and Hydroxyzine were included in `all_antihistamines.smi` (STEP 2), so it’s not surprising that the transfer-learned model reproduces them.
+
+Interestingly, compound 21 is also known as **Decloxizine**—a known H₁-blocker _not_ present in our training set. However, it may not be sufficiently original.
+
+To generate more diverse or potentially novel scaffolds, one can **skip STEP 2** entirely and sample directly from the general `reinvent.prior`. Below are a few examples obtained this way:
+
+![Diverse Hits without STEP2](images/skip_step2.png)
+
+---
+
 ## 📜 Reference
 
 - Loeffler, H.H., He, J., Tibo, A. et al. Reinvent 4: Modern AI–driven generative molecule design. J Cheminform 16, 20 (2024). https://doi.org/10.1186/s13321-024-00812-5
