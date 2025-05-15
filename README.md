@@ -161,7 +161,7 @@ Both Cetirizine and Hydroxyzine were included in `all_antihistamines.smi` (STEP 
 
 Interestingly, compound **21** is also known, but was not in the training set. It is [**Decloxizine**](https://pubchem.ncbi.nlm.nih.gov/compound/Decloxizine)—a known H₁-blocker belonging to 2nd class anti-histamines. In a clinical study in the 70s, it was was reported to have no CNS side-effects versus placebo.
 
-To generate more original compounds, one could consider skiping **STEP 2** entirely, and sample directly from the general `reinvent.prior`. Below are some examples obtained this way:
+To generate more original compounds, one could consider skiping **STEP 2** entirely, and sample directly from the general `reinvent.prior`. Below are some examples obtained in this way:
 
 <p align="center">
   <img src="images/skip_step2.png" alt="Diphenhydramine diverse analogs" />
