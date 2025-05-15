@@ -5,7 +5,7 @@ In this tutorial, we will teach a recurrent neural network (RNN) to design bette
 
 ## 📖 Introduction
 
-Diphenhydramine is a highly lipophilic first-generation antihistamine (log P ≈ 3.3) associated with strong CNS uptake—total brain levels are ∼18× higher than plasma in rats, with an unbound brain/plasma ratio of ∼4–7. In this tutorial, **we will bias our analogs toward lower log P** to moderate passive diffusion across the BBB. However, ABCB1-mediated efflux is often the dominant mechanism distinguishing non-sedating H₁ antagonists (e.g., cetirizine) from sedating first-generation drugs (Broccatelli et al., 2010). Therefore, future designs might need to combine increased polarity with structural features that enhance P-gp substrate activity to further reduce CNS exposure.
+Diphenhydramine is a highly lipophilic first-generation antihistamine (log P ≈ 3.3) associated with strong CNS uptake—total brain levels are ∼18× higher than plasma in rats, with an unbound brain/plasma ratio of ∼4–7. In this tutorial, we will bias our analogs toward lower log P to moderate passive diffusion across the BBB. However, ABCB1-mediated efflux is often the dominant mechanism distinguishing non-sedating H₁ antagonists (e.g., cetirizine) from sedating first-generation drugs (Broccatelli et al., 2010). Therefore, future designs might need to combine increased polarity with structural features that enhance P-gp substrate activity to reduce CNS exposure.
 
 ---
 
