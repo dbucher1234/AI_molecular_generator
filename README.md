@@ -163,7 +163,9 @@ Interestingly, compound **21** is also known, but was not in the training set. I
 
 To generate more original compounds, one could consider skiping **STEP 2** entirely, and sample directly from the general `reinvent.prior`. Below are some examples obtained this way:
 
-![Diverse Hits without STEP2](images/skip_step2.png)
+<p align="center">
+  <img src="images/skip_step2.png" alt="Diphenhydramine diverse analogs" />
+</p>
 
 ---
 
