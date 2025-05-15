@@ -155,7 +155,7 @@ This approach can be used to generate thousands of candidates for docking studie
 
 Inspecting the sampled structures from the fine-tuned model, two familiar scaffolds appear:
 
-- Compound **11** and **21** are almost identical to **Cetirizine** (Zyrtec), and **Hydroxyzine**, respectively—both obtained by adding a single para-chloro group.
+- Compound **11** and **21** are almost identical to [**Cetirizine**](https://en.wikipedia.org/wiki/Cetirizine) (Zyrtec), and **Hydroxyzine**, respectively—both obtained by adding a single para-chloro group.
 
 Both Cetirizine and Hydroxyzine were included in `all_antihistamines.smi` (STEP 2), so it’s not surprising that the transfer-learned model reproduces compounds that are very similar.
 
