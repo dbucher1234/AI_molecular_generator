@@ -103,6 +103,7 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
 - **Mid NLL (10 – 15):** Similar to reference  
 - **High NLL (> 15):** Diverse
 
+<div style="text-align: center">
 | #  | SMILES (truncated)                       | NLL   | clogP  | Interpretation            |
 |----|-------------------------------------------|-------|-------|---------------------------|
 | 1  | CN(C)CCOC(c1ccccc1)c1ccccc1               | 0.000 | 4.60  | Identical to reference    |
@@ -113,7 +114,7 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
 | 6  | CC(C)OCCCN(C)C(=O)CCNC(=O)c1ccccc1        | 26.21 | –0.20 | Very diverse              |
 
 <img src="images/Analogues.png" alt="Selected sampling output" />
-
+</div>
 At this stage, one could already plot clogP versus the NLL in Datawarrior, and inspect analogues that are closely related but more polar.
 
 ---
