@@ -104,14 +104,16 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
 - **High NLL (> 15):** Diverse
 
 <div style="text-align: center">
+
 | #  | SMILES (truncated)                       | NLL   | clogP  | Interpretation            |
-|----|-------------------------------------------|-------|-------|---------------------------|
-| 1  | CN(C)CCOC(c1ccccc1)c1ccccc1               | 0.000 | 4.60  | Identical to reference    |
-| 2  | CN(C)CCC(c1ccc(Cl)cc1)c1ccccn1            | 11.40 | 3.10  | Similar                   |
-| 3  | O=C(O)COCCN1CCN(C(c2ccccc2)c2ccccc2)CC1   | 12.00 | 0.80  | Similar                   |
-| 4  | CC(CN1c2ccccc2Sc2ccccc21)N(C)C            | 12.50 | 4.30  | Similar                   |
-| 5  | CN(C)CCOC(=O)c1ccccc1F                    | 15.00 | 2.70  | Diverse                   |
-| 6  | CC(C)OCCCN(C)C(=O)CCNC(=O)c1ccccc1        | 26.21 | –0.20 | Very diverse              |
+|----|-------------------------------------------|-------|--------|---------------------------|
+| 1  | CN(C)CCOC(c1ccccc1)c1ccccc1               | 0.000 | 4.60   | Identical to reference    |
+| 2  | CN(C)CCC(c1ccc(Cl)cc1)c1ccccn1            | 11.40 | 3.10   | Similar                   |
+| 3  | O=C(O)COCCN1CCN(C(c2ccccc2)c2ccccc2)CC1   | 12.00 | 0.80   | Similar                   |
+| 4  | CC(CN1c2ccccc2Sc2ccccc21)N(C)C            | 12.50 | 4.30   | Similar                   |
+| 5  | CN(C)CCOC(=O)c1ccccc1F                    | 15.00 | 2.70   | Diverse                   |
+| 6  | CC(C)OCCCN(C)C(=O)CCNC(=O)c1ccccc1        | 26.21 | –0.20  | Very diverse              |
+
 </div>
 
 <img src="images/Analogues.png" alt="Selected sampling output" />
