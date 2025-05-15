@@ -103,8 +103,6 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
 - **Mid NLL (10 – 15):** Similar to reference  
 - **High NLL (> 15):** Diverse
 
-<div style="text-align: center">
-
 | #  | SMILES (truncated)                       | NLL   | clogP  | Interpretation            |
 |----|-------------------------------------------|-------|--------|---------------------------|
 | 1  | CN(C)CCOC(c1ccccc1)c1ccccc1               | 0.000 | 4.60   | Identical to reference    |
@@ -113,8 +111,6 @@ A measure of how “surprised” the model is by a SMILES string—lower NLL mea
 | 4  | CC(CN1c2ccccc2Sc2ccccc21)N(C)C            | 12.50 | 4.30   | Similar                   |
 | 5  | CN(C)CCOC(=O)c1ccccc1F                    | 15.00 | 2.70   | Diverse                   |
 | 6  | CC(C)OCCCN(C)C(=O)CCNC(=O)c1ccccc1        | 26.21 | –0.20  | Very diverse              |
-
-</div>
 
 <img src="images/Analogues.png" alt="Selected sampling output" />
 
