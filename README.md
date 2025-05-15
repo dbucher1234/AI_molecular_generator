@@ -157,7 +157,7 @@ Inspecting the sampled structures from the fine-tuned model, two familiar scaffo
 
 - Compound **11** and **21** are almost identical to **Cetirizine** (Zyrtec), and **Hydroxyzine**, respectively—both obtained by adding a single para-chloro group.
 
-Both Cetirizine and Hydroxyzine were included in `all_antihistamines.smi` (STEP 2), so it’s not surprising that the transfer-learned model reproduces them.
+Both Cetirizine and Hydroxyzine were included in `all_antihistamines.smi` (STEP 2), so it’s not surprising that the transfer-learned model reproduces compounds that are very similar.
 
 Interestingly, compound **21** is also known, but was not in the training set. It is **Decloxizine**—a known H₁-blocker, belonging to 2nd class anti-histamines considered to have less side-effects, as reported in a clinical study in the 70s.
 
