@@ -159,7 +159,7 @@ Inspecting the sampled structures from the fine-tuned model, two familiar scaffo
 
 Both Cetirizine and Hydroxyzine were included in `all_antihistamines.smi` (STEP 2), so it’s not surprising that the model learned to reproduce compounds that are very similar.
 
-Interestingly, compound **21** is also known, but was not in the training set. It is [**Decloxizine**](https://pubchem.ncbi.nlm.nih.gov/compound/Decloxizine)—a known H₁-blocker, belonging to 2nd class anti-histamines that was reported to have no CNS side-effects versus placebo, in a clinical study in the 70s.
+Interestingly, compound **21** is also known, but was not in the training set. It is [**Decloxizine**](https://pubchem.ncbi.nlm.nih.gov/compound/Decloxizine)—a known H₁-blocker belonging to 2nd class anti-histamines. In a clinical study in the 70s, it was was reported to have no CNS side-effects versus placebo.
 
 To generate more original compounds, one could consider skiping **STEP 2** entirely and sampling directly from the general `reinvent.prior`. Below are just a few examples obtained this way:
 
